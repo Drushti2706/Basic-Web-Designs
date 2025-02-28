@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+    font-family: Arial;
+    border: border-box; 
+
+
+}
+
+.navbar {
+    display: flex;
+}
+
+#nav-logo-amz{
+    width: 30px;
+}
