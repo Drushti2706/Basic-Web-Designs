@@ -1,0 +1,17 @@
+git init 
+
+git add -A 
+
+git commit -m "msg"
+
+git push -u origin main
+
+
+// if -> master , to check for main branch
+
+ls - list all directories
+pwd - curent path
+
+cd - chamge directory 
+
+clear
