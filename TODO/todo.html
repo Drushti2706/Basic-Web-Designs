@@ -67,26 +67,26 @@
     <div class="container">
         <h2>To-Do List</h2>
         <input type="text" id="taskInput" placeholder="Enter a task">
-        <button onclick="addTask()">AddTask</button>
+        <button onclick="addTask()">Add Task</button>
         <ul id="taskList"></ul>
-
     </div>
+
     <script>
         function addTask() {
-            const input =document.getElementById("taskInput");
-           const taskText = input.value.trim();
-           if (taskText !== " ")  {
-            document.createElement("li");
-            li.innerHTML = `${taskText}
-            <span class="delete" onClick="removeTask(this)">x</span>`;
-            document.getElementById("taskList").appendChild(li);
-            input.value = " ";
-
-           }
+            const input = document.getElementById("taskInput");
+            const listArea = document.getElementById("taskList");
+            const taskText = input.value.trim();
+            
+            if (taskText !== "") {  // Ensure there's no empty space
+                const li = document.createElement("li"); // Fix: assign to li variable
+                li.innerHTML = `${taskText} <span class="delete" onClick="removeTask(this)">x</span>`;
+                listArea.appendChild(li);
+                input.value = "";  // Clear the input field after adding the task
+            }
         }
 
         function removeTask(element) {
-            element.parentElement.remove();
+            element.parentElement.remove(); // Remove the task item
         }
     </script>
 </body>
